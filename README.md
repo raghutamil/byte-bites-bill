@@ -1,6 +1,7 @@
 # Welcome to your Lovable project
 
 ## Project info
+project is live press the below link to visit
 
 **URL**: https://byte-bites-bill.lovable.app
 
