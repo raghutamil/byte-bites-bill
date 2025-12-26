@@ -1,16 +1,13 @@
-import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
 import { Printer } from "lucide-react";
 
 export const PrintBill = () => {
   const { cart, getCartTotal } = useStore();
-  const printRef = useRef<HTMLDivElement>(null);
   const total = getCartTotal();
 
   const handlePrint = () => {
-    const printContent = printRef.current;
-    if (!printContent) return;
+    if (cart.length === 0) return;
 
     const printWindow = window.open("", "", "width=300,height=600");
     if (!printWindow) return;
