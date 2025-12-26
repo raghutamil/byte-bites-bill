@@ -111,8 +111,16 @@ export const PrintBill = () => {
 
     printWindow.document.close();
     printWindow.focus();
-    printWindow.print();
-    printWindow.close();
+    
+    // Wait for content to load before printing
+    printWindow.onload = () => {
+      printWindow.print();
+    };
+    
+    // Fallback for browsers where onload doesn't fire
+    setTimeout(() => {
+      printWindow.print();
+    }, 250);
   };
 
   if (cart.length === 0) return null;
