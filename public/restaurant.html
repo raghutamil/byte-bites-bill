@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Indian Restaurant</title>
+  <link rel="stylesheet" href="restaurant.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">🍽️ South Indian Restaurant</h1>
+      <nav class="nav">
+        <a href="#" class="nav-link active">Menu</a>
+        <a href="#" class="nav-link">Reports</a>
+        <a href="#" class="nav-link">Manage Menu</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="grid">
+      <!-- Menu Section -->
+      <div class="menu-section">
+        <div class="section-header">
+          <h2 class="section-title">Our Menu</h2>
+          <p class="section-subtitle">Click on any item to add it to your order</p>
+        </div>
+        
+        <div class="menu-grid" id="menuGrid">
+          <!-- Menu items will be inserted here by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Cart Section -->
+      <div class="cart-section">
+        <div class="cart-card">
+          <h2 class="cart-title">🧾 Current Order</h2>
+          
+          <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+          </div>
+          
+          <div class="cart-total" id="cartTotal" style="display: none;">
+            <span>Total:</span>
+            <span id="totalAmount">₹0</span>
+          </div>
+          
+          <div class="cart-actions">
+            <button class="btn btn-secondary" id="printBtn" disabled>
+              🖨️ Print Bill
+            </button>
+            <button class="btn btn-primary" id="payBtn" disabled>
+              💳 Pay Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Payment Modal -->
+  <div class="modal" id="paymentModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Complete Payment</h3>
+        <button class="modal-close" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-total">Total: <strong id="modalTotal">₹0</strong></p>
+        <div class="payment-methods">
+          <button class="payment-btn" data-method="cash">💵 Cash</button>
+          <button class="payment-btn" data-method="card">💳 Card</button>
+          <button class="payment-btn" data-method="upi">📱 UPI</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="restaurant.js"></script>
+</body>
+</html>
