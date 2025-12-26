@@ -2,9 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
-
-## How can I edit this code?
+**URL**: https://byte-bites-bill.lovable.app
 
 There are several ways of editing your application.
 
