@@ -31,12 +31,9 @@ export const MenuCard = ({ item }: MenuCardProps) => {
       <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-display text-lg font-semibold text-card group-hover:text-primary-foreground transition-colors">
+            <h3 className="font-display text-lg font-semibold text-primary-foreground transition-colors">
               {item.name}
             </h3>
-            <p className="text-primary font-semibold group-hover:text-accent transition-colors">
-              ₹{item.price}
-            </p>
           </div>
           <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
             <Plus className="w-5 h-5 text-primary-foreground" />
