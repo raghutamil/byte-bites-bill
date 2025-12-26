@@ -42,10 +42,10 @@ export const MenuCard = ({ item }: MenuCardProps) => {
       </div>
       
       <div className="p-4 group-hover:opacity-0 transition-opacity duration-300">
-        <h3 className="font-display text-lg font-semibold text-card-foreground">
+        <h3 className="font-display text-base font-semibold text-card-foreground">
           {item.name}
         </h3>
-        <p className="text-primary font-semibold">₹{item.price}</p>
+        <p className="text-xl font-bold text-primary drop-shadow-sm">₹{item.price}</p>
       </div>
     </button>
   );
